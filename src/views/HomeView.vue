@@ -30,19 +30,19 @@ onMounted(() => {
     <div>Selamat Datang Di Kedai Kamii</div>
 
     <div>
-      <RouterLink to="/create-kedai" class="bg-blue-500 text-white px-4 py-2 rounded">
+      <RouterLink to="/kedai">
         Buat Kedai Baru
       </RouterLink>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div v-for="kedai in kedais" :key="kedai.id" class="border p-4 rounded">
-        <img :src="kedai.image" alt="" class="w-full h-32 object-cover mb-2 rounded">
-        <h2 class="text-lg font-bold">{{ kedai.name }}</h2>
-        <p>{{ kedai.address }}</p>
-        <p>{{ new Date(Number(kedai.time) * 1000).toLocaleString() }}</p>
-        <p>Rating: {{ kedai.rating }}</p>
-      </div>
+      <li v-for="kedai in kedais" :key="kedai.id">
+        <img :src="kedai.image">
+        <div>{{ kedai.name }}</div>
+        <div>{{ kedai.address }}</div>
+        <div>{{ new Date(Number(kedai.time) * 1000).toLocaleString() }}</div>
+        <div>Rating: {{ kedai.rating }}</div>
+      </li>
     </div>
   </main>
 </template>
