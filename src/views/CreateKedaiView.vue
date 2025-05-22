@@ -19,7 +19,7 @@ const saveData = async () => {
         time:  Date.parse(time.value)/1000,
     })
 
-    const response = await fetch('/api/kedais', {
+    const response = await fetch('/api/kedai', {
         method: 'POST',
         body: newKedai
     })
