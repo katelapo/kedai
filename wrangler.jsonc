@@ -1,0 +1,8 @@
+{
+    "name": "kedai",
+    "compatibility_date": "2023-10-01",
+    "assets": {
+        "not_found_handling": "single-page-application"
+    },
+    "main": "api/index.ts"
+}
