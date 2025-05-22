@@ -14,7 +14,7 @@ export default {
         }       else if (request.method == "POST") {
                 const newId = crypto.randomUUID()
                 const input = await request.json<any>()
-                const query = 'INSERT INTO kedais (id, name, address) VALUES ("${newId}", "${input.name}", "${input.address}")';
+                const query = 'INSERT INTO kedais (id, name, address, time) VALUES ("${newId}", "${input.name}", "${input.address}", "${input.time}")';
                 const newKedai = await env.DB.exec(query);
                 return Response.json(newKedai);
         }
