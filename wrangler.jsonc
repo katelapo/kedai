@@ -2,7 +2,15 @@
     "name": "kedai",
     "compatibility_date": "2023-10-01",
     "assets": {
-        "not_found_handling": "single-page-application"
+        "not_found_handling": "single-page-application",
+        "binding": "ASSETS"
     },
-    "main": "api/index.ts"
+    "main": "api/index.ts",
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "kedai",
+            "database_id": "0140a9cd-fbc7-4f92-8283-82b64c4a3e08"
+        }
+    ]
 }
