@@ -9,7 +9,7 @@ export default {
 
         if (url.pathname.startsWith("/api/kedais")) {
            if (request.method == "GET") {
-                let result = await env.DB.prepare("SELECT * FROM kedais").all();
+                let result = await env.DB.prepare("SELECT * FROM kedai").all();
                 return Response.json(result.results);
         }       else if (request.method == "POST") {
                 const newId = crypto.randomUUID()
