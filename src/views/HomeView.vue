@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
 
 interface Kedai {
   id: number
@@ -26,6 +27,12 @@ onMounted(() => {
 <template>
   <main>
     <div>Selamat Datang Di Kedai Kamii</div>
+
+    <div>
+      <RouterLink to="/create-kedai" class="bg-blue-500 text-white px-4 py-2 rounded">
+        Buat Kedai Baru
+      </RouterLink>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div v-for="kedai in kedais" :key="kedai.id" class="border p-4 rounded">

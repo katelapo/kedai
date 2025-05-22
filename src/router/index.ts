@@ -10,6 +10,16 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/kedai',
+      name: 'create-kedai',
+      component: () => import('../views/CreateKedaiView.vue'),
+    },
+    {
+      path: '/kedai/:id',
+      name: 'edit-kedai',
+      component: () => import('../views/EditKedaiView.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
