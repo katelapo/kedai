@@ -5,8 +5,9 @@ import { RouterLink } from 'vue-router'
 interface Kedai {
   id: number
   name: string
-  location: string
+  address: string
   rating: number
+  time: string
   image: string
 }
 
@@ -38,7 +39,8 @@ onMounted(() => {
       <div v-for="kedai in kedais" :key="kedai.id" class="border p-4 rounded">
         <img :src="kedai.image" alt="" class="w-full h-32 object-cover mb-2 rounded">
         <h2 class="text-lg font-bold">{{ kedai.name }}</h2>
-        <p>{{ kedai.location }}</p>
+        <p>{{ kedai.address }}</p>
+        <p>{{ new Date(Number(kedai.time) * 1000).toLocaleString() }}</p>
         <p>Rating: {{ kedai.rating }}</p>
       </div>
     </div>
