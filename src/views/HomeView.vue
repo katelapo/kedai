@@ -44,5 +44,8 @@ onMounted(() => {
         <div>Rating: {{ kedai.rating }}</div>
       </li>
     </div>
+     <div>
+            <RouterLink :to="`/kedai/${kedai.id}`">Edit</RouterLink>
+          </div>
   </main>
 </template>
