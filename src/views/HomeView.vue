@@ -42,10 +42,8 @@ onMounted(() => {
         <div>{{ kedai.address }}</div>
         <div>{{ new Date(Number(kedai.time) * 1000).toLocaleString() }}</div>
         <div>Rating: {{ kedai.rating }}</div>
+        <RouterLink :to="`/kedai/${kedai.id}`">Edit</RouterLink>
       </li>
     </div>
-     <div>
-            <RouterLink :to="`/kedai/${kedai.id}`">Edit</RouterLink>
-          </div>
   </main>
 </template>
