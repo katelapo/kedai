@@ -21,13 +21,13 @@ const saveData = async () => {
 
     const response = await fetch('/api/kedais', {
         method: 'POST',
-        body: newKedai
+        body: newKedai,
     })
 
     const data = await response.json()
 
-    
-    router.push ('/')
+
+    router.push('/')
 }
 </script>
 
